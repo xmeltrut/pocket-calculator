@@ -56,6 +56,9 @@ function Calculator() {
             case '÷':
                 result = Number(previousInput) / Number(input);
                 break;
+            case '^':
+                result = Number(previousInput) ** Number(input);
+                break;
             default:
                 break;
         }
@@ -125,6 +128,7 @@ function Calculator() {
                     <Button value={"."} callback={pressDecimalPoint} />
                     <Button value={"AC"} callback={pressAllClear} />
                     <Button value={"="} callback={pressEquals} />
+                    <Button value={"^"} callback={pressOperator} />
                 </div>
             </main>
         </div>

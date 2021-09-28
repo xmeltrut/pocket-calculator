@@ -78,6 +78,14 @@ test('division', () => {
     expect(display.textContent).toEqual('4.5');
 });
 
+test('power', () => {
+    render(<Calculator />);
+    const display = screen.getByRole(/figure/i);
+
+    pressButtons(['4', '^', '3', '=']);
+    expect(display.textContent).toEqual('64');
+});
+
 test('square root', () => {
     render(<Calculator />);
     const display = screen.getByRole(/figure/i);
